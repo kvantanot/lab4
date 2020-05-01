@@ -21,6 +21,16 @@ namespace lab4
                 employees[i].Write();
 
             }
+
+            StringBuilder sb = new StringBuilder();
+            Random rnd = new Random();
+            String symblos = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";
+            for (int i = 0; i < 100; i++)
+            {
+                int length = rnd.Next(20, 101);
+                string temp = new String(Enumerable.Repeat(symblos, length).Select(s => s[rnd.Next(symblos.Length)]).ToArray());
+                sb.Append(temp);
+            }
         }
 
     }
