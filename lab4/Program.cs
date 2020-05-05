@@ -31,6 +31,8 @@ namespace lab4
                 string temp = new String(Enumerable.Repeat(symblos, length).Select(s => s[rnd.Next(symblos.Length)]).ToArray());
                 sb.Append(temp);
             }
+            String result = sb.ToString();
+            Console.WriteLine(result);
         }
 
     }
